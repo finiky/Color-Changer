@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 const App = () => {
   const [color, setColor] = useState("white");
   useEffect(() => {
-    document.getElementById("main").style.backgroundColor = color;
     document.getElementsByTagName("body")[0].style.backgroundColor = color;
-    document.getElementById("div1").style.backgroundColor = color;
   }, [color]);
   return (
     <div id="main" className={styles.main}>
@@ -42,7 +40,7 @@ const App = () => {
             className={styles.yellow}
           ></button>
         </aside>
-        <div className={styles.div}></div>
+        <div></div>
       </div>
     </div>
   );
